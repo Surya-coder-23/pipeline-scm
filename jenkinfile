@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages 
+    {
+           stage('checkout')
+           {
+            steps 
+
+            {
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'// repository url used to get a code
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'buildjenkinsjob'
+            }
+        }
+        stage('test') 
+        {
+            steps {
+                 echo 'testjenkinsjob'
+            }
+        }
+        stage('deploy') 
+        {
+            steps {
+                 echo 'deployjenkinsjob'
+            }
+        }
+    }
+}
