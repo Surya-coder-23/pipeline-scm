@@ -1,7 +1,7 @@
 pipeline {
     agent any
         tools {
-        Maven 'Maven' // Optional: remove if not using Maven
+               'Maven' // Optional: remove if not using Maven
     }
     stages {
         stage('Checkout') {
